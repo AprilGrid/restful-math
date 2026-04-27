@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-primary: #005da7;
+  --color-primary-container: #2976c7;
+  --color-on-primary-container: #fdfcff;
+  
+  --color-surface: #f8f9ff;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #414751;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e5eeff;
+  
+  --color-outline: #717783;
+  --color-outline-variant: #c1c7d3;
+
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.cloud-shadow {
+  box-shadow: 0 4px 20px -2px rgba(74, 144, 226, 0.08);
+}
+
+.cloud-shadow-lg {
+  box-shadow: 0 8px 30px -4px rgba(74, 144, 226, 0.12);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 bg-primary rounded-full border-4 border-white shadow-md cursor-pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply w-6 h-6 bg-primary rounded-full border-4 border-white shadow-md cursor-pointer;
+}
